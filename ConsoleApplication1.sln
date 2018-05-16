@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.Models", "WebApplication2.Models\WebApplication2.Models.csproj", "{CAC35842-FBC3-41BA-BEA5-825B5F172866}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.Tests", "WebApplication2.Tests\WebApplication2.Tests.csproj", "{701A7D1D-E841-4EEE-97A8-DE2C32196018}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A5EC1C4-AF9B-4332-9C1C-F2AB4DC416B5} = {7A5EC1C4-AF9B-4332-9C1C-F2AB4DC416B5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
