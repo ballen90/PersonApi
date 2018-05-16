@@ -28,20 +28,5 @@ namespace WebApplication2
 
             return null;
         }
-
-        public static string RemoveSpecialCharacters(string line)
-        {
-            line = new string((from c in line
-                               where char.IsWhiteSpace(c) || char.IsLetterOrDigit(c)
-                               select c
-                               ).ToArray());
-            return line;
-        }
-
-        public static DateTime FormatDate(string dateInput)
-        {
-            DateTime parsedDate = DateTime.Parse(dateInput);
-            return parsedDate;
-        }
     }
 }

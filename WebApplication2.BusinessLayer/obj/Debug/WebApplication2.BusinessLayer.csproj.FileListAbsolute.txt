@@ -1,0 +1,12 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.BusinessLayer.dll.config
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.BusinessLayer.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.BusinessLayer.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.BusinessLayer.Interfaces.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.DataLayerInterfaces.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.Models.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.BusinessLayer.Interfaces.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.DataLayerInterfaces.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\bin\Debug\WebApplication2.Models.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\obj\Debug\WebApplication2.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\obj\Debug\WebApplication2.BusinessLayer.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer\obj\Debug\WebApplication2.BusinessLayer.pdb

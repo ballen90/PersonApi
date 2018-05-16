@@ -1,0 +1,10 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.DataLayer.dll.config
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.DataLayer.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.DataLayer.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.DataLayerInterfaces.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.Models.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.DataLayerInterfaces.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\bin\Debug\WebApplication2.Models.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\obj\Debug\WebApplication2.DataLayer.csprojResolveAssemblyReference.cache
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\obj\Debug\WebApplication2.DataLayer.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayer\obj\Debug\WebApplication2.DataLayer.pdb

@@ -1,0 +1,4 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayerInterfaces\bin\Debug\WebApplication2.DataLayerInterfaces.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayerInterfaces\bin\Debug\WebApplication2.DataLayerInterfaces.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayerInterfaces\obj\Debug\WebApplication2.DataLayerInterfaces.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.DataLayerInterfaces\obj\Debug\WebApplication2.DataLayerInterfaces.pdb

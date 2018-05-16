@@ -48,17 +48,13 @@
       <Project>{EF5B7DD5-5BB0-48C2-8266-C625427C2255}</Project>
       <Name>WebApplication2.BusinessLayer.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebApplication2.DataLayerInterfaces\WebApplication2.DataLayer.Interfaces.csproj">
+    <ProjectReference Include="..\WebApplication2.DataLayerInterfaces\WebApplication2.DataLayerInterfaces.csproj">
       <Project>{0b1d89fd-4ce6-4568-8b36-500c6784cf55}</Project>
-      <Name>WebApplication2.DataLayer.Interfaces</Name>
+      <Name>WebApplication2.DataLayerInterfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApplication2.Models\WebApplication2.Models.csproj">
       <Project>{cac35842-fbc3-41ba-bea5-825b5f172866}</Project>
       <Name>WebApplication2.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApplication2\WebApplication2.csproj">
-      <Project>{D16B262F-52B9-4240-A81C-53AE328FD1EC}</Project>
-      <Name>WebApplication2</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

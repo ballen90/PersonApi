@@ -1,6 +1,7 @@
 ﻿namespace WebApplication2.BusinessLayer
 {
     using Models;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using WebApplication2;
@@ -18,7 +19,7 @@
 
         public string CreateRecord(string record)
         {
-            var modifiedRecord = Utilities.RemoveSpecialCharacters(record);
+            var modifiedRecord = this.RemoveSpecialCharacters(record);
 
             return this.personDataLayer.CreateRecord(record);
         }
@@ -64,9 +65,24 @@
                             FirstName = personDetail[1],
                             Gender = personDetail[2],
                             FavoriteColor = personDetail[3],
-                            DateOfBirth = Utilities.FormatDate(personDetail[4])
+                            DateOfBirth = this.FormatDate(personDetail[4])
                         };
             return query;
+        }
+
+        public string RemoveSpecialCharacters(string line)
+        {
+            line = new string((from c in line
+                               where char.IsWhiteSpace(c) || char.IsLetterOrDigit(c)
+                               select c
+                               ).ToArray());
+            return line;
+        }
+
+        public DateTime FormatDate(string dateInput)
+        {
+            DateTime parsedDate = DateTime.Parse(dateInput);
+            return parsedDate;
         }
     }
 }

@@ -44,18 +44,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebApplication2.DataLayerInterfaces\WebApplication2.DataLayer.Interfaces.csproj">
+    <ProjectReference Include="..\WebApplication2.DataLayerInterfaces\WebApplication2.DataLayerInterfaces.csproj">
       <Project>{0B1D89FD-4CE6-4568-8B36-500C6784CF55}</Project>
-      <Name>WebApplication2.DataLayer.Interfaces</Name>
+      <Name>WebApplication2.DataLayerInterfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApplication2.Models\WebApplication2.Models.csproj">
       <Project>{CAC35842-FBC3-41BA-BEA5-825B5F172866}</Project>
       <Name>WebApplication2.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebApplication2\WebApplication2.csproj">
-      <Project>{D16B262F-52B9-4240-A81C-53AE328FD1EC}</Project>
-      <Name>WebApplication2</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

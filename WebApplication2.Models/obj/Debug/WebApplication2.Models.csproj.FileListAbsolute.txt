@@ -1,0 +1,4 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.Models\bin\Debug\WebApplication2.Models.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.Models\bin\Debug\WebApplication2.Models.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.Models\obj\Debug\WebApplication2.Models.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.Models\obj\Debug\WebApplication2.Models.pdb

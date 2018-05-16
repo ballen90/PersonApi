@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.BusinessLay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.BusinessLayer", "WebApplication2.BusinessLayer\WebApplication2.BusinessLayer.csproj", "{4B9FFDC6-5008-48E9-84F8-61EAAC7E0ED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.DataLayer.Interfaces", "WebApplication2.DataLayerInterfaces\WebApplication2.DataLayer.Interfaces.csproj", "{0B1D89FD-4CE6-4568-8B36-500C6784CF55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.DataLayerInterfaces", "WebApplication2.DataLayerInterfaces\WebApplication2.DataLayerInterfaces.csproj", "{0B1D89FD-4CE6-4568-8B36-500C6784CF55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2.DataLayer", "WebApplication2.DataLayer\WebApplication2.DataLayer.csproj", "{7A5EC1C4-AF9B-4332-9C1C-F2AB4DC416B5}"
 EndProject
