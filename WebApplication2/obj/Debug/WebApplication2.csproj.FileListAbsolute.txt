@@ -1,0 +1,12 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\WebApplication2.dll.config
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\WebApplication2.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\WebApplication2.pdb
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Net.Http.Formatting.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Web.Http.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Web.Http.WebHost.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Net.Http.Formatting.xml
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Web.Http.xml
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\bin\System.Web.Http.WebHost.xml
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2\obj\Debug\WebApplication2.pdb

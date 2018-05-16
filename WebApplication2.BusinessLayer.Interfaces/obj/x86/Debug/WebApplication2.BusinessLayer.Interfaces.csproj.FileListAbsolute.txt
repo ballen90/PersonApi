@@ -1,0 +1,1 @@
+C:\Applications\ConsoleApp\ConsoleApplication1\WebApplication2.BusinessLayer.Interfaces\obj\x86\Debug\WebApplication2.BusinessLayer.Interfaces.csprojResolveAssemblyReference.cache
