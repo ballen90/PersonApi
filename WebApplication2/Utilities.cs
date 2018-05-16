@@ -4,8 +4,17 @@
     using System.Net;
     using System.Net.Http;
 
+    /// <summary>
+    /// Static utilities class
+    /// </summary>
     public static class Utilities
     {
+        /// <summary>
+        /// Validates that the record being sent isn't empty.
+        /// </summary>
+        /// <param name="request">HttpRequestMessage</param>
+        /// <param name="record">the string record</param>
+        /// <returns>HttpResponseMessage or null</returns>
         public static HttpResponseMessage ValidateRecordRequest(HttpRequestMessage request, string record)
         {
             // check if record is null or empty
@@ -16,6 +25,7 @@
 
             return null;
         }
+
 
         public static string RemoveSpecialCharacters(string line)
         {

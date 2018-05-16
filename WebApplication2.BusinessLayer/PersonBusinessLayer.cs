@@ -85,12 +85,22 @@
             return query;
         }
 
+        /// <summary>
+        /// Formats string representation of a date into a datetime
+        /// </summary>
+        /// <param name="dateInput">dateInput in string format</param>
+        /// <returns>datetime</returns>
         public DateTime FormatDate(string dateInput)
         {
             DateTime parsedDate = DateTime.Parse(dateInput);
             return parsedDate;
         }
 
+        /// <summary>
+        /// Removes select delimiters from a string
+        /// </summary>
+        /// <param name="text">A string</param>
+        /// <returns>string array</returns>
         public string[] removeDelimiters (string text)
         {
            var modifiedLine = text.Replace("|", "").Replace(",", "").Replace("  ", " ").Split(' ');
