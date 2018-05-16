@@ -30,7 +30,7 @@
         /// </summary>
         /// <returns>Http status code</returns>
         [HttpGet]
-        [Route("gender/")]
+        [Route("records/gender/")]
         public HttpResponseMessage GetRecordSortedByGender()
         {
             try
@@ -49,7 +49,7 @@
         /// </summary>
         /// <returns>Http status code</returns>
         [HttpGet]
-        [Route("birthdate/")]
+        [Route("records/birthdate/")]
         public HttpResponseMessage GetRecordSortedByBirthdate()
         {
             try
@@ -68,7 +68,7 @@
         /// </summary>
         /// <returns>Http status code</returns>
         [HttpGet]
-        [Route("name/")]
+        [Route("records/name/")]
         public HttpResponseMessage GetRecordsSortedByLastName()
         {
             try
@@ -88,7 +88,7 @@
         /// <param name="request">Text record</param>
         /// <returns>Http status code</returns>
         [HttpPost]
-        [Route("records/{textRecord}")]
+        [Route("records/")]
         public HttpResponseMessage CreateRecord(string record)
         {
             try

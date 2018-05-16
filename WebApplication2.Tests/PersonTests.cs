@@ -3,6 +3,7 @@ using Moq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using WebApplication2.BusinessLayer;
 using WebApplication2.BusinessLayer.Interfaces;
 using WebApplication2.DataLayerInterfaces;
@@ -17,7 +18,7 @@ namespace WebApplication2.BusinessLayer.Tests
         private IPersonBusinessLayer personBusinessLayer;
         private Mock<IPersonDataLayer> moq_personDataLayer;
 
-        private readonly string DUMMY_RECORD1 = "Johnson | Brenda | Female | Green | 03/17/1989";
+        private readonly string DUMMY_RECORD = "Johnson | Brenda | Female | Green | 03/17/1989";
 
         [TestInitialize]
         public void Initialize()
@@ -39,7 +40,7 @@ namespace WebApplication2.BusinessLayer.Tests
         [TestMethod()]
         public void CreateRecordTest()
         {
-            var result1 = personBusinessLayer.CreateRecord(DUMMY_RECORD1);
+            var result1 = personBusinessLayer.CreateRecord(DUMMY_RECORD);
 
             Assert.AreNotEqual(result1, null);
         }
@@ -52,7 +53,7 @@ namespace WebApplication2.BusinessLayer.Tests
             Assert.AreNotEqual(result.Count, null);
             Assert.IsTrue(result.Count > 0);
             Assert.IsTrue(result.Count == 3);
-            Assert.AreEqual(result[0].FavoriteColor, "Blue");
+            Assert.AreEqual(result[0].FavoriteColor, "Pink");
         }
 
         [TestMethod()]
@@ -74,7 +75,23 @@ namespace WebApplication2.BusinessLayer.Tests
             Assert.AreNotEqual(result.Count, null);
             Assert.IsTrue(result.Count > 0);
             Assert.IsTrue(result.Count == 3);
-            Assert.AreEqual(result[2].FavoriteColor, "Pink");
+            Assert.AreEqual(result[2].FavoriteColor, "Red");
+        }
+
+        [TestMethod]
+        public void RemoveDelimiterTest()
+        {
+            var result = personBusinessLayer.RemoveDelimiters(DUMMY_RECORD);
+
+            StringBuilder builder = new StringBuilder();
+            foreach (string value in result)
+            {
+                builder.Append(value);
+                builder.Append(' ');
+            }
+
+            Assert.AreEqual(builder.ToString().TrimEnd(), "Johnson Brenda Female Green 03/17/1989");
+            Assert.AreNotEqual(result, DUMMY_RECORD);
         }
 
 

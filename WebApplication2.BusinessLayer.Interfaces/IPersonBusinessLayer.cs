@@ -29,5 +29,12 @@
         /// </summary>
         /// <returns>List of person object</returns>
         List<Person> GetRecordSortedByGender();
+
+        /// <summary>
+        /// Removes select delimiters from a string
+        /// </summary>
+        /// <param name="text">A string</param>
+        /// <returns>string array</returns>
+        string[] RemoveDelimiters(string line);
     }
 }

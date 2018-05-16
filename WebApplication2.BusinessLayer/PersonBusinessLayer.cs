@@ -23,7 +23,7 @@
         /// <returns>A string</returns>
         public string CreateRecord(string record)
         {
-            var modifiedRecord = this.removeDelimiters(record).ToString();
+            var modifiedRecord = this.RemoveDelimiters(record);
 
             return this.personDataLayer.CreateRecord(record);
         }
@@ -73,27 +73,16 @@
         private IEnumerable<Person> ModifyTextFileData(IEnumerable<string> data)
         {
             var query = from line in data
-                        let personDetail = removeDelimiters(line)
+                        let personDetail = RemoveDelimiters(line)
                         select new Person
                         {
                             LastName = personDetail[0],
                             FirstName = personDetail[1],
                             Gender = personDetail[2],
                             FavoriteColor = personDetail[3],
-                            DateOfBirth = this.FormatDate(personDetail[4])
+                            DateOfBirth = DateTime.Parse(personDetail[4])
                         };
             return query;
-        }
-
-        /// <summary>
-        /// Formats string representation of a date into a datetime
-        /// </summary>
-        /// <param name="dateInput">dateInput in string format</param>
-        /// <returns>datetime</returns>
-        public DateTime FormatDate(string dateInput)
-        {
-            DateTime parsedDate = DateTime.Parse(dateInput);
-            return parsedDate;
         }
 
         /// <summary>
@@ -101,7 +90,7 @@
         /// </summary>
         /// <param name="text">A string</param>
         /// <returns>string array</returns>
-        public string[] removeDelimiters (string text)
+        public string[] RemoveDelimiters (string text)
         {
            var modifiedLine = text.Replace("|", "").Replace(",", "").Replace("  ", " ").Split(' ');
             return modifiedLine;

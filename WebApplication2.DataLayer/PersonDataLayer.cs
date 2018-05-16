@@ -16,7 +16,11 @@
         {
             try
             {
-                File.WriteAllText(@"C:\Applications\New Text Document.txt", record);
+                using (StreamWriter file = new StreamWriter(@"C:\Applications\New Text Document.txt", true))
+                {
+                    file.WriteLine(record, Environment.NewLine);
+                }
+                //File.WriteAllText(@"C:\Applications\New Text Document.txt", record);
 
                 return "File added successfully";
             }
