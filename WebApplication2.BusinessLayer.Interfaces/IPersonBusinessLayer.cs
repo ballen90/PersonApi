@@ -6,31 +6,28 @@
     public interface IPersonBusinessLayer
     {
         /// <summary>
-        /// 
+        /// Creates a new record to be saved to txt file.
         /// </summary>
-        /// <param name="record"></param>
-        /// <returns></returns>
+        /// <param name="record">A text record</param>
+        /// <returns>string</returns>
         string CreateRecord(string record);
 
         /// <summary>
-        /// 
+        /// Gets records sorted by last name, descending.
         /// </summary>
-        /// <param name="order"></param>
-        /// <returns></returns>
-        List<Person> GetRecordsSortedByName();
+        /// <returns>List of person object</returns>
+        List<Person> GetRecordsSortedByLastNameDescending();
 
         /// <summary>
-        /// 
+        /// Gets recorts sorted by birt date, ascending.
         /// </summary>
-        /// <param name="order"></param>
-        /// <returns></returns>
-        List<Person> GetRecordSortedByBirthdate();
-        
+        /// <returns>List of person object</returns>
+        List<Person> GetRecordsSortedByBirthdateAscending();
+
         /// <summary>
-        /// 
+        /// Gets records sorted by gender (females before males) then by last name ascending.
         /// </summary>
-        /// <param name="order"></param>
-        /// <returns></returns>
+        /// <returns>List of person object</returns>
         List<Person> GetRecordSortedByGender();
     }
 }

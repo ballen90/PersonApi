@@ -28,8 +28,7 @@
         /// <summary>
         /// Gets records sorted by gender
         /// </summary>
-        /// <param name="order">The request - Male or Female</param>
-        /// <returns></returns>
+        /// <returns>Http status code</returns>
         [HttpGet]
         [Route("gender/")]
         public HttpResponseMessage GetRecordSortedByGender()
@@ -46,42 +45,16 @@
         }
 
         /// <summary>
-        /// 
+        /// Gets records sorted by birthdate ascending
         /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
+        /// <returns>Http status code</returns>
         [HttpGet]
-        [Route("birthdate/{sortOrder}")]
+        [Route("birthdate/")]
         public HttpResponseMessage GetRecordSortedByBirthdate()
         {
             try
             {
-                //var badRequest = Utilities.ValidateNameRequest(this.Request);
-                //if (badRequest != null)
-                //{
-                //    return badRequest;
-                //}
-                var response = this.personBusinessLayer.GetRecordsSortedByName();
-                return Request.CreateResponse(HttpStatusCode.OK, response);
-            }
-            catch (Exception e)
-            {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, e);
-            }
-        }
-
-        [HttpGet]
-        [Route("name/{sortOrder}")]
-        public HttpResponseMessage GetRecordsSortedByName(string sortOrder)
-        {
-            try
-            {
-                //var badRequest = Utilities.ValidateNameRequest(this.Request, sortOrder);
-                //if (badRequest != null)
-                //{
-                //    return badRequest;
-                //}
-                var response = this.personBusinessLayer.GetRecordsSortedByName();
+                var response = this.personBusinessLayer.GetRecordsSortedByBirthdateAscending();
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (Exception e)
@@ -91,10 +64,29 @@
         }
 
         /// <summary>
-        /// 
+        /// Gets records sorted by last name
         /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
+        /// <returns>Http status code</returns>
+        [HttpGet]
+        [Route("name/")]
+        public HttpResponseMessage GetRecordsSortedByLastName()
+        {
+            try
+            {
+                var response = this.personBusinessLayer.GetRecordsSortedByLastNameDescending();
+                return Request.CreateResponse(HttpStatusCode.OK, response);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e);
+            }
+        }
+
+        /// <summary>
+        /// Creates and adds a new record to the .txt file.
+        /// </summary>
+        /// <param name="request">Text record</param>
+        /// <returns>Http status code</returns>
         [HttpPost]
         [Route("records/{textRecord}")]
         public HttpResponseMessage CreateRecord(string record)

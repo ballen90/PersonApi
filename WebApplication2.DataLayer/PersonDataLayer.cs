@@ -2,14 +2,16 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using DataLayerInterfaces;
     using System.IO;
 
     public class PersonDataLayer : IPersonDataLayer
     {
+        /// <summary>
+        /// Creates a new record to add to the .txt file.
+        /// </summary>
+        /// <param name="record">text record</param>
+        /// <returns>A string</returns>
         public string CreateRecord(string record)
         {
             try
@@ -24,6 +26,10 @@
             }
         }
 
+        /// <summary>
+        /// Reads data from the .txt file.
+        /// </summary>
+        /// <returns>IEnumerable string</returns>
         public IEnumerable<string> GetTextData()
         {
             try
