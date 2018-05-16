@@ -43,6 +43,12 @@
     <Compile Include="IPersonDataLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplication2.Models\WebApplication2.Models.csproj">
+      <Project>{CAC35842-FBC3-41BA-BEA5-825B5F172866}</Project>
+      <Name>WebApplication2.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
