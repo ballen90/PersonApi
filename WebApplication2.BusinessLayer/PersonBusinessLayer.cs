@@ -19,7 +19,7 @@
 
         public string CreateRecord(string record)
         {
-            var modifiedRecord = this.RemoveSpecialCharacters(record);
+            var modifiedRecord = this.removeDelimiters(record).ToString();
 
             return this.personDataLayer.CreateRecord(record);
         }
@@ -58,7 +58,8 @@
         {
             var query = from line in data
                             //let personDetail = utilities.RemoveSpecialCharacters(line).Replace("  ", " ").Split(' ')
-                        let personDetail = line.Replace("|", "").Replace(",", "").Replace("  ", " ").Split(' ')
+                        let personDetail = removeDelimiters(line)
+                        //line.Replace("|", "").Replace(",", "").Replace("  ", " ").Split(' ')
                         select new Person
                         {
                             LastName = personDetail[0],
@@ -70,19 +71,16 @@
             return query;
         }
 
-        public string RemoveSpecialCharacters(string line)
-        {
-            line = new string((from c in line
-                               where char.IsWhiteSpace(c) || char.IsLetterOrDigit(c)
-                               select c
-                               ).ToArray());
-            return line;
-        }
-
         public DateTime FormatDate(string dateInput)
         {
             DateTime parsedDate = DateTime.Parse(dateInput);
             return parsedDate;
+        }
+
+        public string[] removeDelimiters (string text)
+        {
+           var modifiedLine = text.Replace("|", "").Replace(",", "").Replace("  ", " ").Split(' ');
+            return modifiedLine;
         }
     }
 }

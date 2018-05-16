@@ -1,14 +1,14 @@
 ﻿namespace WebApplication2.Controllers
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Net;
     using System.Net.Http;
     using System.Web.Http;
     using WebApplication2.BusinessLayer.Interfaces;
-    using Models;
 
+    /// <summary>
+    /// Person Controller
+    /// </summary>
     public class PersonController : ApiController
     {
         /// <summary>
@@ -26,12 +26,12 @@
         }
         
         /// <summary>
-        /// 
+        /// Gets records sorted by gender
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="order">The request - Male or Female</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("gender/{type}")]
+        [Route("gender/{gender}")]
         public HttpResponseMessage GetRecordSortedByGender(string order)
         {
             try
@@ -56,17 +56,17 @@
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("birthdate/")]
-        public HttpResponseMessage GetRecordSortedByBirthdate(string order)
+        [Route("birthdate/{sortOrder}")]
+        public HttpResponseMessage GetRecordSortedByBirthdate(string sortOrder)
         {
             try
             {
-                var badRequest = Utilities.ValidateNameRequest(this.Request, order);
+                var badRequest = Utilities.ValidateNameRequest(this.Request, sortOrder);
                 if (badRequest != null)
                 {
                     return badRequest;
                 }
-                var response = this.personBusinessLayer.GetRecordsSortedByName(order);
+                var response = this.personBusinessLayer.GetRecordsSortedByName(sortOrder);
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (Exception e)
@@ -76,7 +76,7 @@
         }
 
         [HttpGet]
-        [Route("name/")]
+        [Route("name/{sortOrder}")]
         public HttpResponseMessage GetRecordsSortedByName(string sortOrder)
         {
             try
@@ -101,7 +101,7 @@
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("records/{record}")]
+        [Route("records/{textRecord}")]
         public HttpResponseMessage CreateRecord(string record)
         {
             try
