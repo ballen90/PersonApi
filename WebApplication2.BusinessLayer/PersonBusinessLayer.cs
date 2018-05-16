@@ -24,17 +24,17 @@
             return this.personDataLayer.CreateRecord(record);
         }
 
-        public List<Person> GetRecordsSortedByName(string record)
+        public List<Person> GetRecordsSortedByName()
         {
             var data = this.personDataLayer.GetTextData();
 
             var modifiedData = this.ModifyTextFileData(data);
 
-            return modifiedData.OrderBy(x => x.LastName)
+            return modifiedData.OrderByDescending(x => x.LastName)
                 .ToList();
         }
 
-        public List<Person> GetRecordSortedByBirthdate(string record)
+        public List<Person> GetRecordSortedByBirthdate()
         {
             var data = this.personDataLayer.GetTextData();
 
@@ -43,15 +43,15 @@
             return modifiedData.OrderBy(x => x.DateOfBirth).ToList();
         }
 
-        public List<Person> GetRecordSortedByGender(string record)
+        public List<Person> GetRecordSortedByGender()
         {
             var data = this.personDataLayer.GetTextData();
 
-            var modifiedData = this.ModifyTextFileData(data);
+            var modifiedData = this.ModifyTextFileData(data).ToList();
 
             return modifiedData.OrderBy(x => x.Gender)
-                .ThenBy(x => x.LastName)
-                .ToList();
+                    .ThenBy(x => x.LastName)
+                    .ToList();
         }
 
         private IEnumerable<Person> ModifyTextFileData(IEnumerable<string> data)

@@ -60,12 +60,14 @@ namespace WebApplication2
             // check if request contains any special characters and remove them and lower the type
             gender = RemoveSpecialCharacters(gender).ToUpper();
 
-            if (gender != GENDER_FEMALE || gender != GENDER_MALE)
+            if (gender.Equals(GENDER_MALE) || gender.Equals(GENDER_FEMALE))
+            {
+                return null;
+            }
+            else
             {
                 return request.CreateResponse(HttpStatusCode.BadRequest, "Gender type must be either male or female.");
             }
-
-            return null;
         }
 
         public static string RemoveSpecialCharacters(string line)

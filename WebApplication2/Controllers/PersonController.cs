@@ -31,17 +31,12 @@
         /// <param name="order">The request - Male or Female</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("gender/{gender}")]
-        public HttpResponseMessage GetRecordSortedByGender(string order)
+        [Route("gender/")]
+        public HttpResponseMessage GetRecordSortedByGender()
         {
             try
             {
-                var badRequest = Utilities.ValidateNameRequest(this.Request, order);
-                if (badRequest != null)
-                {
-                    return badRequest;
-                }
-                var response = this.personBusinessLayer.GetRecordsSortedByName(order);
+                var response = this.personBusinessLayer.GetRecordSortedByGender();
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (Exception e)
@@ -57,16 +52,16 @@
         /// <returns></returns>
         [HttpGet]
         [Route("birthdate/{sortOrder}")]
-        public HttpResponseMessage GetRecordSortedByBirthdate(string sortOrder)
+        public HttpResponseMessage GetRecordSortedByBirthdate()
         {
             try
             {
-                var badRequest = Utilities.ValidateNameRequest(this.Request, sortOrder);
-                if (badRequest != null)
-                {
-                    return badRequest;
-                }
-                var response = this.personBusinessLayer.GetRecordsSortedByName(sortOrder);
+                //var badRequest = Utilities.ValidateNameRequest(this.Request);
+                //if (badRequest != null)
+                //{
+                //    return badRequest;
+                //}
+                var response = this.personBusinessLayer.GetRecordsSortedByName();
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (Exception e)
@@ -81,12 +76,12 @@
         {
             try
             {
-                var badRequest = Utilities.ValidateNameRequest(this.Request, sortOrder);
-                if (badRequest != null)
-                {
-                    return badRequest;
-                }
-                var response = this.personBusinessLayer.GetRecordsSortedByName(sortOrder);
+                //var badRequest = Utilities.ValidateNameRequest(this.Request, sortOrder);
+                //if (badRequest != null)
+                //{
+                //    return badRequest;
+                //}
+                var response = this.personBusinessLayer.GetRecordsSortedByName();
                 return Request.CreateResponse(HttpStatusCode.OK, response);
             }
             catch (Exception e)

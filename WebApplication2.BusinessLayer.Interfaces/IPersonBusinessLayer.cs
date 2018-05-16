@@ -17,20 +17,20 @@
         /// </summary>
         /// <param name="order"></param>
         /// <returns></returns>
-        List<Person> GetRecordsSortedByName(string order);
+        List<Person> GetRecordsSortedByName();
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="order"></param>
         /// <returns></returns>
-        List<Person> GetRecordSortedByBirthdate(string order);
+        List<Person> GetRecordSortedByBirthdate();
         
         /// <summary>
         /// 
         /// </summary>
         /// <param name="order"></param>
         /// <returns></returns>
-        List<Person> GetRecordSortedByGender(string order);
+        List<Person> GetRecordSortedByGender();
     }
 }
